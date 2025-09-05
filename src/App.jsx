@@ -4,6 +4,7 @@ import About from './components/About';
 import Card1 from './components/Card1';
 import Card2 from './components/Card2';
 import img from './assets/profile/bob.jpg';
+import img2 from './assets/profile/andy.jpg';
 //import img1 from './assets/headshot-man.jpg';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Card2
             name="Andy"
             role="UX designer"
-            img="src/assets/profile/andy.jpg"
+            img={img2}
             featured
           />
         </div>
