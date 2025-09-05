@@ -5,6 +5,7 @@ import Card1 from './components/Card1';
 import Card2 from './components/Card2';
 import img from './assets/profile/bob.jpg';
 import img2 from './assets/profile/andy.jpg';
+import Card from './components/Card';
 //import img1 from './assets/headshot-man.jpg';
 
 function App() {
@@ -18,8 +19,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container cards">
+      <Card title="Profiles">
           <Card1
             name="Bob"
             role="Web developer"
@@ -31,8 +31,7 @@ function App() {
             img={img2}
             featured
           />
-        </div>
-      </section>
+          </Card>
     </>
   );
 }

@@ -1,11 +1,14 @@
-const Card1 = ({ name, role, img, featured }) => {
+const Card1 = ({ name, role, img, size = 96 }) => {
     return (
-    <div className={`card${featured ? ' featured' : ''}`}>
+        <div className="card">
+        {img && (
         <img
-        className="profile-pic"
-        src={img}
-        alt={name + " photo"}
+            className="profile-pic"
+            style={{ width: size, height: size }}
+            src={img}
+            alt={name + " photo"}
         />
+        )}
         <h3>{name}</h3>
         <p>{role}</p>
     </div>
