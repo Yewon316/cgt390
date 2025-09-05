@@ -21,12 +21,12 @@ function App() {
           <Card1
             name="Bob"
             role="Web developer"
-            img="public/profile/bob.jpg"
+            img="src/assets/profile/bob.jpg"
           />
           <Card2
             name="Andy"
             role="UX designer"
-            img="public/profile/andy.jpg"
+            img="src/assets/profile/andy.jpg"
             featured
           />
         </div>
