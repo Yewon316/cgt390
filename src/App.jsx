@@ -17,14 +17,14 @@ function App() {
       <section className="section">
         <div className="container cards">
           <Card1
-            title="Bob"
-            text="Student profile."
-            img="/profile/bob.jpg"
+            name="Bob"
+            role="Web developer"
+            img="public/profile/bob.jpg"
           />
           <Card1
-            title="Andy"
-            text="Student profile."
-            img="/profile/andy.jpg"
+            name="Andy"
+            role="UX designer"
+            img="public/profile/andy.jpg"
             featured
           />
         </div>

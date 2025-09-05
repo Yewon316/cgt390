@@ -1,12 +1,11 @@
 const About = () => {
     const sectionClass = "section about";
-    const name = "Yewon Choi";
-    const subtitle = "CGT ";
+    const content = "dfjijaidjsijsijcisjcoijscjkzxncjskncjksncjksdnckjsdrtyuiduhfgdhsjdchdcdvfdfgvfdwsdfgbgfdesedfgv";
 
     return (
         <section className={sectionClass}>
             <h2>About</h2>
-            <p><strong>{name}</strong> — {subtitle}</p>
+            <p><strong>{content}</strong></p>
         </section>
     );
     };

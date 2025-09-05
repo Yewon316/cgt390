@@ -1,5 +1,5 @@
 function Header() {
-    const title = "Profile";
+    const title = "Profile App";
 
     return (
         <header className="site-header">
