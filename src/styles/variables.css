@@ -1,6 +1,8 @@
 :root{
 	--font-roboto: 'Roboto', sans-serif;
-	--text-color: #e83636;
+	--text-color: #555eff;
 	--link-color: #3333;
-	--background-color:
+	--background-color:#eeeeee;
+	--card-border: #e5e7eb;
+
 }

@@ -1,8 +1,14 @@
 const About = () => {
-    return (<div className ="about">
+    const sectionClass = "section about";
+    const name = "Yewon Choi";
+    const subtitle = "CGT ";
 
-    </div>
+    return (
+        <section className={sectionClass}>
+            <h2>About</h2>
+            <p><strong>{name}</strong> — {subtitle}</p>
+        </section>
     );
-}
+    };
 
-export default About;
+    export default About;

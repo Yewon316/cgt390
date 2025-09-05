@@ -1,3 +1,32 @@
-@import './styles/global.css';
 @import './styles/reset.css';
-@import './styles/variables.css'
+@import './styles/variables.css';
+@import './styles/global.css';
+
+.section { padding: 2rem 1rem; }
+.container { max-width: 960px; margin: 0 auto; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 16px;
+}
+.card.featured { outline: 2px solid #1d4ed8; }
+
+.site-header { padding: 2rem 1rem; text-align: center; }
+.site-header .tagline { margin-top: .25rem; color: #555; }
+
+.profile {
+    display: block;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 8px;
+    border: 2px solid #e5e7eb;
+}  
