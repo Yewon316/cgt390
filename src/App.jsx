@@ -3,6 +3,7 @@ import Header from './components/header';
 import About from './components/About';
 import Card1 from './components/Card1';
 import Card2 from './components/Card2';
+import img from './assets/profile/bob.jpg';
 //import img1 from './assets/headshot-man.jpg';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Card1
             name="Bob"
             role="Web developer"
-            img="src/assets/profile/bob.jpg"
+            img={img}
           />
           <Card2
             name="Andy"
