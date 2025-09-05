@@ -2,6 +2,8 @@ import './App.css';
 import Header from './components/header';
 import About from './components/About';
 import Card1 from './components/Card1';
+import Card2 from './components/Card2';
+//import img1 from './assets/headshot-man.jpg';
 
 function App() {
   return (
@@ -21,7 +23,7 @@ function App() {
             role="Web developer"
             img="public/profile/bob.jpg"
           />
-          <Card1
+          <Card2
             name="Andy"
             role="UX designer"
             img="public/profile/andy.jpg"

@@ -3,7 +3,7 @@
 @import './styles/global.css';
 
 .section { padding: 2rem 1rem; }
-.container { max-width: 960px; margin: 0 auto; }
+.container { max-width: 960px; margin: 0 auto;  margin-left: auto; }
 
 .cards {
     display: grid;
@@ -16,17 +16,19 @@
     border-radius: 10px;
     padding: 16px;
 }
-.card.featured { outline: 2px solid #1d4ed8; }
+.Card2 {
+    outline: 2px solid #1d4ed8;   
+    border-color: transparent;    
+    border-radius: 12px;          
+}
+
 
 .site-header { padding: 2rem 1rem; text-align: center; }
 .site-header .tagline { margin-top: .25rem; color: #555; }
 
-.profile {
-    display: block;
-    width: 96px;
-    height: 96px;
+.profile-pic {
+    width: 80px; 
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 8px;
-    border: 2px solid #e5e7eb;
-}  
+}
