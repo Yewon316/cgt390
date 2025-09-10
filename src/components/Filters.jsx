@@ -1,4 +1,3 @@
-// src/components/Filters.jsx
 const Filters = ({ titles, value, onChange, query, onQueryChange, onReset }) => {
     return (
         <div className="filter-container" style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap' }}>

@@ -55,9 +55,8 @@ function App() {
 
         <div className="cards">
           {list.map(p => {
-            if (p.name === 'Andy') {
-              return <Card1 key={p.email} title={p.name} text={p.role} img={p.img} />;
-            } else if (p.name === 'Bob') {
+            if (p.name === 'Bob') 
+              {
               return (
                 <Card2
                   key={p.email}
@@ -68,7 +67,7 @@ function App() {
                   text={p.role}
                 />
               );
-            } else {
+              } else {
               return <Card1 key={p.email} title={p.name} text={p.role} img={p.img} />;
             }
           })}
