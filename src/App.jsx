@@ -6,11 +6,12 @@ import Card2 from './components/Card2';
 import img from './assets/profile/bob.jpg';
 import img2 from './assets/profile/andy.jpg';
 import img3 from './assets/profile/amy.jpg';
-import Card from './components/Card';
-import { useState } from 'react';
+// import Card from './components/Card';
+import { useState, useEffect } from 'react';
 import Filters from './components/Filters';
 import Wrapper from './components/Wrapper';
 //import img1 from './assets/headshot-man.jpg';
+
 
 function App() {
   const profiles = [
@@ -19,23 +20,29 @@ function App() {
     { name: 'Amy',  role: 'Engineer',      email: 'amy@example.com',  img: img3 },
   ];
 
-  const roles = Array.from(new Set(profiles.map(p => p.role)));
+  const roles = Array.from(new Set(profiles.map(p => (p.role || '').trim())));
 
   const [role, setRole] = useState('');
   const [q, setQ] = useState('');
+  const [theme, setTheme] = useState('light');
 
+
+  useEffect(() => {
+    const html = document.documentElement;
+    html.classList.remove('theme-light', 'theme-dark');
+    html.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light');
+  }, [theme]);
+  
+  
   function onRole(e) { setRole(e.target.value); }
   function onQ(e)    { setQ(e.target.value); }
   function reset()   { setRole(''); setQ(''); }
-
-  const list = profiles.filter(p =>
-    (role === '' || p.role === role) &&
-    p.name.toLowerCase().includes(q.toLowerCase())
-  );
-
   return (
     <>
-      <Header />
+    <Header
+      theme={theme}
+      onToggleTheme={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))}
+    />
 
       <section className="section">
         <div className="container">
@@ -53,10 +60,16 @@ function App() {
           onReset={reset}
         />
 
-        <div className="cards">
-          {list.map(p => {
-            if (p.name === 'Bob') 
-              {
+      <div className="cards">
+        {profiles
+          .filter(function (p) {
+            var r = (p.role || '').trim();
+            var byRole = (role === '') || (r === role);
+            var byName = p.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+            return byRole && byName;
+          })
+          .map(function (p) {
+            if (p.name === 'Bob') {
               return (
                 <Card2
                   key={p.email}
@@ -67,11 +80,19 @@ function App() {
                   text={p.role}
                 />
               );
-              } else {
-              return <Card1 key={p.email} title={p.name} text={p.role} img={p.img} />;
+            } else {
+              return (
+                <Card1
+                  key={p.email}
+                  title={p.name}
+                  text={p.role}
+                  img={p.img}
+                />
+              );
             }
           })}
-        </div>
+      </div>
+
       </Wrapper>
     </>
   );

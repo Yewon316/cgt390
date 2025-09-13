@@ -1,13 +1,18 @@
-function Header() {
+function Header({ theme, onToggleTheme }) {
     const title = "Profile App";
 
     return (
-        <header className="site-header">
-        <h1>{title}</h1>
-        <p className="tagline">This is the profile page</p>
-        <p>Yewon Choi</p>
-        </header>
+    <header className="site-header">
+        <div>
+            <h1>{title}</h1>
+            <p>Yewon Choi</p>
+        </div>
+
+        <button type="button" onClick={onToggleTheme}>
+            {theme === 'dark' ? 'Light' : 'Dark'}
+        </button>
+    </header>
     );
 }
 
-    export default Header;
+export default Header;
