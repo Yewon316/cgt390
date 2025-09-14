@@ -6,11 +6,11 @@ const Card1 = (props) => {
     const img   = props.img;
 
     return (
-        <div className={styles.card}>
-            {img ? <img className={styles.img} src={img} alt={title} /> : null}
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.body}>{body}</p>
-        </div>
+    <div className={styles.card}>
+        {img ? <img src={img} alt={title} style={{ width: 120, display: 'block' }} /> : null}
+        <h3>{title}</h3>
+        <p>{body}</p>
+    </div>
     );
 };
 export default Card1;
