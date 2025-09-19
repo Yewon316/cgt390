@@ -70,7 +70,7 @@ function validateNow(v) {
     if (!email) next.email = "Email is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Invalid email.";
     if (!title) next.title = "Title is required.";
-    if (!v.image) next.image = "ㅕpload an image.";
+    if (!v.image) next.image = "upload an image.";
 
     return { nextErrors: next, cleaned: { name, email, title, bio, image: v.image } };
 }
