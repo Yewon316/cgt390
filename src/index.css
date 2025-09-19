@@ -11,7 +11,7 @@
   --card-border: #e5e7eb;
 }
 :root.theme-light {
-  --text-color: #747bff;
+  --text-color: #515afb;
   --background-color: #ffffff;
   --card-border: #e5e7eb;
 
@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #747bff;
+  border-color: #515afb;
 }
 button:focus,
 button:focus-visible {
@@ -62,7 +62,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #515afb;
   }
   button {
     background-color: #f9f9f9;
