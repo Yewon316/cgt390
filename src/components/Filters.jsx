@@ -16,7 +16,7 @@ const Filters = ({ titles, value, onChange, query, onQueryChange, onReset }) => 
             <input
             id="search"
             type="text"
-            placeholder="Search name…"
+            placeholder="Search name"
             value={query}
             onChange={onQueryChange}
         />

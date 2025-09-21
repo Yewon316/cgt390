@@ -12,6 +12,7 @@ import Filters from './components/Filters';
 import Wrapper from './components/Wrapper';
 import AddProfile from './components/AddProfile'; 
 //import img1 from './assets/headshot-man.jpg';
+import FetchedProfiles from './components/FetchedProfiles';
 
 function App() {
   const initialProfiles = [
@@ -100,6 +101,10 @@ function App() {
             })}
         </div>
       </Wrapper>
+
+            <Wrapper>
+              <FetchedProfiles/>
+            </Wrapper>
     </>
   );
 }

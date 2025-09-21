@@ -37,7 +37,7 @@ function AddProfile({ onAdd }) {
         return;
     }
 
-    const okType = ["image/png", "image/jpeg", "image/jpg", "image/gif"].includes(file.type);
+    const okType = ["image/jpg"].includes(file.type);
     if (!okType) {
         setErrors((prev) => ({ ...prev, image: "Wrong file type" }));
         setValues((prev) => ({ ...prev, image: null }));
@@ -68,7 +68,6 @@ function validateNow(v) {
 
     if (!name) next.name = "Name is required.";
     if (!email) next.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Invalid email.";
     if (!title) next.title = "Title is required.";
     if (!v.image) next.image = "upload an image.";
 
