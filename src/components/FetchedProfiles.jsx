@@ -8,6 +8,7 @@ function FetchedProfiles() {
     const [search, setSearch] = useState("");
     const [items, setItems]   = useState([]);
     const [loading, setLoading] = useState(false);
+    const [err, setErr] = useState("");
 
 
 useEffect(function () {
@@ -28,6 +29,9 @@ useEffect(function () {
         url = "https://web.ics.purdue.edu/~zong6/profile-app/fetch-data.php";
     } else {
         url = "https://web.ics.purdue.edu/~zong6/profile-app/fetch-data-with-filter.php"
+        +"?title=" + encodeURIComponent(title)
+        +"&name="  + encodeURIComponent(search)
+        +"&page=1&limit=10";
     }
 
     fetch(url)
