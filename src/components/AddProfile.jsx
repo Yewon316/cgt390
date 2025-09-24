@@ -37,7 +37,7 @@ function AddProfile({ onAdd }) {
         return;
     }
 
-    const okType = ["image/jpg"].includes(file.type);
+    const okType = ["image/jpeg", "image/jpg", "image/png"].includes(file.type);
     if (!okType) {
         setErrors((prev) => ({ ...prev, image: "Wrong file type" }));
         setValues((prev) => ({ ...prev, image: null }));

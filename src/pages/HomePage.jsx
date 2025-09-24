@@ -1,7 +1,3 @@
-
-import Wrapper from "../components/Wrapper";
-import Filters from "../components/Filters";
-
 function HomePage() {
     return (
     <section className="section">

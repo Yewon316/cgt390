@@ -102,7 +102,6 @@ function App() {
               })}
           </div>
         </Wrapper>
-
         <Wrapper>
           <FetchedProfiles/>
         </Wrapper>
@@ -110,7 +109,7 @@ function App() {
     );
   }
 
-
+// notfound page
   function NotFound() {
     return (
       <section className="section">
@@ -132,16 +131,20 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomeContent />} />
-
-        <Route path="/add" element={<AddProfilePage />} />
+        <Route 
+          path="/add" 
+          element={<AddProfilePage onAdd={handleAddProfile} />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/others" element={
+
+
           <section className="section">
             <div className="container">
               <h2>Other profiles</h2>
               <FetchedProfiles />
             </div>
           </section>
+
         } />
 
         <Route path="*" element={<NotFound />} />

@@ -1,17 +1,14 @@
 import AddProfile from '../components/AddProfile';
 
-function AddProfilePage() {
-  function handleAdd(p) {
-    console.log('added', p);
-  }
-
+function AddProfilePage({ onAdd }) {
   return (
     <section className="section">
       <div className="container">
         <h2>Add profile</h2>
-        <AddProfile onAdd={handleAdd} />
+        <AddProfile onAdd={onAdd} />
       </div>
     </section>
   );
 }
 export default AddProfilePage;
+

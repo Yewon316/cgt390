@@ -12,7 +12,7 @@ const Filters = ({ titles, value, onChange, query, onQueryChange, onReset }) => 
         </div>
 
         <div className="search-filter">
-            <label htmlFor="search">Name:&nbsp;</label>
+            <label htmlFor="search">Name&nbsp;</label>
             <input
             id="search"
             type="text"
