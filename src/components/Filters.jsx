@@ -2,7 +2,7 @@ const Filters = ({ titles, value, onChange, query, onQueryChange, onReset }) => 
     return (
         <div className="filter-container" style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap' }}>
         <div className="select-filter">
-            <label htmlFor="role">Role:&nbsp;</label>
+            <label htmlFor="role">Role&nbsp;</label>
             <select id="role" value={value} onChange={onChange}>
             <option value="">All</option>
             {titles.map((t) => (

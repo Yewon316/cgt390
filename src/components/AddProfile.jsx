@@ -66,10 +66,10 @@ function validateNow(v) {
     const title = stripTags(trimCollapse(v.title));
     const bio = stripTags(v.bio).trim();
 
-    if (!name) next.name = "Name is required.";
-    if (!email) next.email = "Email is required.";
-    if (!title) next.title = "Title is required.";
-    if (!v.image) next.image = "upload an image.";
+    if (!name) next.name = "Name is required";
+    if (!email) next.email = "Email is required";
+    if (!title) next.title = "Title is required";
+    if (!v.image) next.image = "upload an image";
 
     return { nextErrors: next, cleaned: { name, email, title, bio, image: v.image } };
 }
@@ -175,7 +175,7 @@ function onSubmit(e) {
             <input
                 name="image"
                 type="file"
-                accept="image/png, image/jpeg, image/jpg, image/gif"  
+                accept="image/png, image/jpeg, image/jpg"  
                 onChange={onChange}
                 required
             />

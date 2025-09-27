@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Filters from "./Filters";
 import Card1 from "./Card1";
 
+import {Link} from "react-router-dom";
+
 function FetchedProfiles() {
     const [titles, setTitles] = useState([]);
     const [title, setTitle]   = useState("");
@@ -28,8 +30,7 @@ useEffect(function () {
     if (title === "" && search.trim() === "") {
         url = "https://web.ics.purdue.edu/~zong6/profile-app/fetch-data.php";
     } else {
-        url = "https://web.ics.purdue.edu/~zong6/profile-app/fetch-data-with-filter.php"
-        +"?title=" + encodeURIComponent(title)
+        url = "https://web.ics.purdue.edu/~zong6/profile-app/fetch-data-with-filter.php" +"?title=" + encodeURIComponent(title)
         +"&name="  + encodeURIComponent(search)
         +"&page=1&limit=10";
     }
@@ -80,18 +81,15 @@ return (
 
         <div className="cards">
             {items.map(function (p) {
-            return (
-                <Card1
-                key={p.id}
-                title={p.name}
-                text={p.title}
-                img={p.image}
-            />
-            );
-        })}
-            {!loading && items.length === 0 && <div>No results</div>}
+                return (
+                <Link key={p.id} to={"profile/" + p.id} style={{ textDecoration: "none" }}>
+                    <Card1 title={p.name} text={p.title} img={p.image} />
+                </Link>
+                );
+            })}
+        {!loading && items.length === 0 && <div>nothing</div>}
         </div>
-    </div>
+        </div>
     </section>
 );
 }

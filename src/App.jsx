@@ -16,6 +16,10 @@ import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import AddProfilePage from './pages/AddProfilePage'; 
+import ProfileDetails from './pages/ProfileDetails';
+import ProfilesLayout from './pages/ProfilesLayout';
+
+
 
 function App() {
 
@@ -126,28 +130,25 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/add">Add profile</Link>
         <Link to="/about">About</Link>
-        <Link to="/others">Other profiles</Link>
+        <Link to="/fetched-profiles">Other profiles</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<HomeContent />} />
-        <Route 
-          path="/add" 
-          element={<AddProfilePage onAdd={handleAddProfile} />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/add" element={<AddProfilePage onAdd={handleAddProfile} />} />
+        <Route path="/about"lement={<About />}/>
+
+      <Route path="/fetched-profiles" element={<ProfilesLayout />}>
+        <Route index element={<FetchedProfiles />} />
+        <Route path="profile/:id" element={<ProfileDetails />} />
+      </Route>
+
+
         <Route path="/others" element={
-
-
           <section className="section">
-            <div className="container">
-              <h2>Other profiles</h2>
-              <FetchedProfiles />
-            </div>
+            <div className="container"><h2>Not found</h2></div>
           </section>
-
         } />
-
-        <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
   );
